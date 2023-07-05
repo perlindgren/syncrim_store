@@ -7,11 +7,12 @@ pub mod simulator;
 #[cfg(feature = "gui-vizia")]
 pub mod gui_vizia;
 
-// #[cfg(feature = "gui-vizia")]
-// pub use vizia;
+// Conditional re-exports
+#[cfg(feature = "gui-vizia")]
+pub use vizia;
 
-// // Re-exports
-// pub use serde;
-// pub use serde_derive;
-// pub use serde_json;
-// pub use typetag;
+// Unconditional re-exports
+pub use serde;
+pub use serde_derive;
+pub use serde_json;
+pub use typetag;

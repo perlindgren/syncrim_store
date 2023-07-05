@@ -1,6 +1,8 @@
-use serde::{Deserialize, Serialize};
 use std::cell::Cell;
-use syncrim::common::{Component, Input, Output, OutputType, Ports, Signal, Simulator};
+use syncrim::{
+    common::{Component, Input, Output, OutputType, Ports, Signal, Simulator},
+    serde::{Deserialize, Serialize},
+};
 
 #[derive(Serialize, Deserialize)]
 pub struct RegFile {

@@ -1,5 +1,7 @@
-use serde::{Deserialize, Serialize};
-use syncrim::common::{Component, Input, Output, OutputType, Ports, Simulator};
+use syncrim::{
+    common::{Component, Input, Output, OutputType, Ports, Simulator},
+    serde::{Deserialize, Serialize},
+};
 
 #[derive(Serialize, Deserialize)]
 pub struct InstrMem {
