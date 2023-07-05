@@ -1,10 +1,12 @@
 use std::cell::Cell;
 use syncrim::{
     common::{Component, Input, Output, OutputType, Ports, Signal, Simulator},
-    serde::{Deserialize, Serialize},
+    serde::{self, Deserialize, Serialize},
+    typetag,
 };
 
 #[derive(Serialize, Deserialize)]
+#[serde(crate = "self::serde")]
 pub struct RegFile {
     pub id: String,
     pub pos: (f32, f32),

@@ -2,6 +2,7 @@ use crate::components::RegFile;
 use syncrim::{
     common::ViziaComponent,
     gui_vizia::tooltip::new_component_tooltip,
+    typetag,
     vizia::{
         prelude::*,
         vg::{Color, Paint, Path},

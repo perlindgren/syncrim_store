@@ -1,9 +1,11 @@
 use syncrim::{
     common::{Component, Input, Output, OutputType, Ports, Simulator},
-    serde::{Deserialize, Serialize},
+    serde::{self, Deserialize, Serialize},
+    typetag,
 };
 
 #[derive(Serialize, Deserialize)]
+#[serde(crate = "self::serde")]
 pub struct InstrMem {
     pub id: String,
     pub pos: (f32, f32),
